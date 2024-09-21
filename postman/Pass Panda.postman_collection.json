@@ -1,0 +1,3294 @@
+{
+	"info": {
+		"_postman_id": "beeb6be5-355f-4b26-a796-dcc0d78a681d",
+		"name": "Pass Panda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5996874"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Profile",
+							"item": [
+								{
+									"name": "Update Profile",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Arifin Billah",
+													"description": "Mandatory ",
+													"type": "text"
+												},
+												{
+													"key": "date_of_birth",
+													"value": "1985-12-12",
+													"description": "Optional | yyyy-mm-dd",
+													"type": "text"
+												},
+												{
+													"key": "organization",
+													"value": "",
+													"description": "Optional ",
+													"type": "text"
+												},
+												{
+													"key": "profile_photo_path",
+													"value": "",
+													"description": "Optional ",
+													"type": "text"
+												},
+												{
+													"key": "gender",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "blood_group",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add/Edit Socials",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "facebook",
+													"value": "https://www.facebook.com/arifinbillah/",
+													"description": "Optional | URL",
+													"type": "text"
+												},
+												{
+													"key": "linkedin",
+													"value": "https://www.linkedin.com/in/arifin/",
+													"description": "Optional | URL",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/social",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"social"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Socials",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/socials",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"socials"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Contacts",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "mobile_number",
+													"value": "01716107229",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "work_phone_number",
+													"value": "01716107229",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "skype",
+													"value": "arifinbillah",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "discord",
+													"value": "",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "emergency_contact_person",
+													"value": "Tausif",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "emergency_contact_number",
+													"value": "01716107229",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "relation",
+													"value": "Colleague",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "present_address",
+													"value": "Dhaka",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "permanent_address",
+													"value": "Kishoreganj",
+													"description": "Optional",
+													"type": "text"
+												},
+												{
+													"key": "notes",
+													"value": "",
+													"description": "Optional",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/contacts",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"contacts"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Contacts",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/contacts",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"contacts"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update Bank Details",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "bank_name",
+													"value": "SCB",
+													"description": "Mandatory | string",
+													"type": "text"
+												},
+												{
+													"key": "account_name",
+													"value": "Mohammad Arifin Billah",
+													"description": "Mandatory | string",
+													"type": "text"
+												},
+												{
+													"key": "branch_name",
+													"value": "Gulshan",
+													"description": "Mandatory | string",
+													"type": "text"
+												},
+												{
+													"key": "account_number",
+													"value": "123123",
+													"description": "Mandatory | string",
+													"type": "text"
+												},
+												{
+													"key": "routing_number",
+													"value": "",
+													"description": "Optional | string",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/bank-details",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"bank-details"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Bank Details",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/bank-details",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"bank-details"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Skills",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "skill_id",
+													"value": "5",
+													"description": "Mandatory | number",
+													"type": "text"
+												},
+												{
+													"key": "level",
+													"value": "Starter",
+													"description": "Mandatory | string",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/skills",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"skills"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Skill",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/skills/1",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"skills",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Skills",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/skills",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"skills"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Education",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "school",
+													"value": "Lorem Ipsom University 2",
+													"description": "Mandatory | string",
+													"type": "text"
+												},
+												{
+													"key": "degree",
+													"value": "CSE",
+													"description": "Mandatory | string",
+													"type": "text"
+												},
+												{
+													"key": "grade",
+													"value": "3.5",
+													"description": "Optional | string",
+													"type": "text"
+												},
+												{
+													"key": "field_of_study",
+													"value": "",
+													"description": "Optional | string",
+													"type": "text"
+												},
+												{
+													"key": "start_year",
+													"value": "2003",
+													"description": "Optional | Number",
+													"type": "text"
+												},
+												{
+													"key": "end_year",
+													"value": "2007",
+													"description": "Optional | Number",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/educations",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"educations"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Edit Education",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "school",
+													"value": "Lorem Ipsom University 2",
+													"description": "Mandatory | string",
+													"type": "text"
+												},
+												{
+													"key": "degree",
+													"value": "CSE",
+													"description": "Mandatory | string",
+													"type": "text"
+												},
+												{
+													"key": "grade",
+													"value": "3.5",
+													"description": "Optional | string",
+													"type": "text"
+												},
+												{
+													"key": "field_of_study",
+													"value": "",
+													"description": "Optional | string",
+													"type": "text"
+												},
+												{
+													"key": "start_year",
+													"value": "2003",
+													"description": "Optional | Number",
+													"type": "text"
+												},
+												{
+													"key": "end_year",
+													"value": "2007",
+													"description": "Optional | Number",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/educations/3",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"educations",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Education",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/educations",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"educations"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Education",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{baseurl}}/api/profile/educations/3",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"api",
+												"profile",
+												"educations",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Registration",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Arifin Billah",
+									"description": "Mandatory ",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "billah.arifin@gmail.com",
+									"description": "Mandatory | unique",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"description": "Mandatory | Male, Female, Other",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"description": "Optional | image | mimes:jpeg,png,jpg,svg | max:2048'",
+									"type": "file",
+									"src": "postman-cloud:///1eed024b-d08e-41a0-95a6-51b2d01d9198"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"description": "Optional | 1, 0 | default: 1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "Mandatory | min: 6",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456",
+									"description": "Mandatory | min: 6",
+									"type": "text"
+								},
+								{
+									"key": "specialty_id",
+									"value": "1",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "01716107229",
+									"description": "Mandatory ",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "receive_promotional_emails",
+									"value": "1",
+									"description": "Optional | 1, 0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/registration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Arifin Billah",
+									"description": "Mandatory ",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "billah.arifin@gmail.com",
+									"description": "Mandatory | unique",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1985-12-12",
+									"description": "Optional | yyyy-mm-dd",
+									"type": "text"
+								},
+								{
+									"key": "organization",
+									"value": "OYOLLOO",
+									"description": "Optional ",
+									"type": "text"
+								},
+								{
+									"key": "designation_id",
+									"value": "1",
+									"description": "Optional ",
+									"type": "text"
+								},
+								{
+									"key": "blood_group",
+									"value": "",
+									"description": "Optional ",
+									"type": "text"
+								},
+								{
+									"key": "lead_manager_id",
+									"value": "",
+									"description": "Optional ",
+									"type": "text"
+								},
+								{
+									"key": "direct_manager_id",
+									"value": "",
+									"description": "Optional ",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "",
+									"description": "Optional | 1, 0 | default: 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/user/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/logout",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "billah.arifin@gmail.com",
+									"description": "Mandatory ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/forgot-password",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/reset-password",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/profile",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/user/32",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/users?search&orderBy&orderDirection=&paginate=true&page=1&perPage=2&status",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": null,
+									"description": "Optional"
+								},
+								{
+									"key": "orderBy",
+									"value": null,
+									"description": "Optional | Default: name"
+								},
+								{
+									"key": "orderDirection",
+									"value": "",
+									"description": "Optional | Default: asc"
+								},
+								{
+									"key": "paginate",
+									"value": "true",
+									"description": "Optional | Default: false"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Optional | Default: 1"
+								},
+								{
+									"key": "perPage",
+									"value": "2",
+									"description": "Optional | Default: 10"
+								},
+								{
+									"key": "status",
+									"value": null,
+									"description": "Optional | "
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Designation",
+			"item": [
+				{
+					"name": "Capabilities",
+					"item": [
+						{
+							"name": "Add/Edit",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "capabilities",
+											"value": "[1,2,3]",
+											"description": "Mandatory | Array of capability id",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/designations/1/capabilities",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"designations",
+										"1",
+										"capabilities"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "QA",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "order",
+									"value": "10",
+									"description": "Optional | Default: 0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/designations",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"designations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "QA",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "order",
+									"value": "10",
+									"description": "Optional | Default: 0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/designations/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"designations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/designations/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"designations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Designations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/designations?search=&orderBy&orderDirection=&paginate=false&page=1&perPage=2&capabilities=true",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"designations"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "",
+									"description": "Optional | Default: null"
+								},
+								{
+									"key": "orderBy",
+									"value": null,
+									"description": "Optional | Default: name"
+								},
+								{
+									"key": "orderDirection",
+									"value": "",
+									"description": "Optional | Default: asc"
+								},
+								{
+									"key": "paginate",
+									"value": "false",
+									"description": "Optional | Default: false"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Optional | Default: 1"
+								},
+								{
+									"key": "perPage",
+									"value": "2",
+									"description": "Optional | Default: 10"
+								},
+								{
+									"key": "capabilities",
+									"value": "true",
+									"description": "Optional | Default: false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/city",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "HTML5",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/city/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "HTML5",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/city/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/city/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/cities?search=&orderBy&orderDirection=&paginate=false&page=1&perPage=2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"cities"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "",
+									"description": "Optional | Default: null"
+								},
+								{
+									"key": "orderBy",
+									"value": null,
+									"description": "Optional | Default: name"
+								},
+								{
+									"key": "orderDirection",
+									"value": "",
+									"description": "Optional | Default: asc"
+								},
+								{
+									"key": "paginate",
+									"value": "false",
+									"description": "Optional | Default: false"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Optional | Default: 1"
+								},
+								{
+									"key": "perPage",
+									"value": "2",
+									"description": "Optional | Default: 10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Specialty",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/specialty",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"specialty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "HTML5",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/specialty/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"specialty",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "HTML5",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/specialty/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"specialty",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/specialty/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"specialty",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/specialties?search=&orderBy&orderDirection=&paginate=false&page=1&perPage=2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"specialties"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "",
+									"description": "Optional | Default: null"
+								},
+								{
+									"key": "orderBy",
+									"value": null,
+									"description": "Optional | Default: name"
+								},
+								{
+									"key": "orderDirection",
+									"value": "",
+									"description": "Optional | Default: asc"
+								},
+								{
+									"key": "paginate",
+									"value": "false",
+									"description": "Optional | Default: false"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Optional | Default: 1"
+								},
+								{
+									"key": "perPage",
+									"value": "2",
+									"description": "Optional | Default: 10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exams",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "featured_image",
+									"description": "Optional",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "Optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/exam",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "featured_image",
+									"description": "Optional",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "Optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/exam/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"exam",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "HTML5",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/exam/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"exam",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/exam/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"exam",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/exams?search=&orderBy&orderDirection=&paginate=false&page=1&perPage=2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"exams"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "",
+									"description": "Optional | Default: null"
+								},
+								{
+									"key": "orderBy",
+									"value": null,
+									"description": "Optional | Default: name"
+								},
+								{
+									"key": "orderDirection",
+									"value": "",
+									"description": "Optional | Default: asc"
+								},
+								{
+									"key": "paginate",
+									"value": "false",
+									"description": "Optional | Default: false"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Optional | Default: 1"
+								},
+								{
+									"key": "perPage",
+									"value": "2",
+									"description": "Optional | Default: 10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Packages",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "sub_title",
+									"value": "",
+									"description": "Mandatory ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "1",
+									"description": "Mandatory ",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "",
+									"description": "Mandatory ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/package",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"package"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "sub_title",
+									"value": "",
+									"description": "Mandatory ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "Optional",
+									"type": "text"
+								},
+								{
+									"key": "duration",
+									"value": "1",
+									"description": "Mandatory ",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "",
+									"description": "Mandatory ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/package/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"package",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "HTML5",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/package/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"package",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/package/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"package",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/packages?search=&orderBy&orderDirection=&paginate=false&page=1&perPage=2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"packages"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "",
+									"description": "Optional | Default: null"
+								},
+								{
+									"key": "orderBy",
+									"value": null,
+									"description": "Optional | Default: name"
+								},
+								{
+									"key": "orderDirection",
+									"value": "",
+									"description": "Optional | Default: asc"
+								},
+								{
+									"key": "paginate",
+									"value": "false",
+									"description": "Optional | Default: false"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Optional | Default: 1"
+								},
+								{
+									"key": "perPage",
+									"value": "2",
+									"description": "Optional | Default: 10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "exam_id",
+									"value": "1",
+									"description": "Mandatory",
+									"type": "text"
+								},
+								{
+									"key": "package_id",
+									"value": "1",
+									"description": "Mandatory ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/create-order",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"create-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Handle Payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "orderPackageId",
+									"value": "1",
+									"description": "Mandatory",
+									"type": "text"
+								},
+								{
+									"key": "paymentMethodId",
+									"value": "1",
+									"description": "Mandatory ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/handle-payment",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"handle-payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Exams",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/user-exams",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"user-exams"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role Permissions",
+			"item": [
+				{
+					"name": "Create Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test Manager",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "Optional | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/roles",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test Manager",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "Optional | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/roles/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test_manage",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/permissions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"permissions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test_manage",
+									"description": "Mandatory | String",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/permissions/1",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"permissions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Permissions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/permissions",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user skills",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/user/1/skills",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"1",
+								"skills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/roles",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "Create/Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "group",
+									"value": "General",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Site name",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "site_name",
+									"description": "Mandatory | String",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "HR Tool",
+									"description": "Mandatory | String, Array, Number, Boolean",
+									"type": "text"
+								},
+								{
+									"key": "options",
+									"value": "",
+									"description": "Optinal | Array",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/settings",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Settings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/settings",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"settings"
+							],
+							"query": [
+								{
+									"key": "group",
+									"value": "Career",
+									"description": "Optional : String",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "joining_types",
+									"description": "Optional : String",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "17|UH7rpr0ZuZeNtknoysxA1ekwzzXsYabugBIrNI985a3275f4",
+			"type": "string"
+		}
+	]
+}
